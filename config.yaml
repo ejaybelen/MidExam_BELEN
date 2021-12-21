@@ -1,0 +1,11 @@
+---
+  - hosts: Ubuntu, CentOS
+    become: True
+
+    roles:
+     - elastic_stack
+     - nagios
+     - grafana
+     - prometheus
+     - influxdb
+     - lamp_stack

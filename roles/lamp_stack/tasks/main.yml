@@ -1,0 +1,7 @@
+---
+# tasks file for lamp_stack
+# Install Mariadb
+ - include: mariadb.yml
+
+# Install Httpd + PHP
+ - include: httpd_php.yml

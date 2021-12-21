@@ -1,0 +1,4 @@
+---
+# tasks file for grafana
+# Install Grafana
+ - include: grafana.yml

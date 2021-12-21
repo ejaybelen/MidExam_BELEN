@@ -1,0 +1,12 @@
+---
+# tasks file for elastic_stack
+
+# Install Elastic search
+ - include: elasticsearch.yml
+
+# Install Kibana
+ - include: kibana.yml
+
+# Install Logstash
+ - include: logstash.yml
+

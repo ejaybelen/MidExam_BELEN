@@ -1,0 +1,8 @@
+---
+# tasks file for nagios
+# Install Nagios on Ubuntu
+ - include: ubuntu_nagios.yml
+
+# Install Nagios Plugins
+ - include: nagios_plugins.yml
+

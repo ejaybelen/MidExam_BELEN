@@ -1,0 +1,4 @@
+---
+# tasks file for prometheus
+# Install Prometheus
+ - include: prometheus.yml

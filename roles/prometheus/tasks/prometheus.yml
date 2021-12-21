@@ -1,0 +1,28 @@
+---
+- name: Install Prometheus
+  apt:
+    name: prometheus
+    state: latest
+    update_cache: yes
+
+- name: Start Prometheus
+  service:
+    name: prometheus
+    state: started
+
+
+- name: Add Prometheus Repository
+  copy:
+    src: prometheus.repo
+    dest: /etc/yum.repos.d
+
+- name: Install Prometheus
+  yum:
+    name: prometheus2
+    state: latest
+    update_cache: yes
+
+- name: Start Prometheus
+  service:
+    name: prometheus
+    state: started

@@ -1,0 +1,33 @@
+---
+- name: Add Influxdata Key
+  apt_key:
+    url: https://repos.influxdata.com/influxdb.key
+    state: present
+
+- name: Install Influxdb
+  apt:
+    name: influxdb
+    state: latest
+    update_cache: yes
+
+- name: Start influxdb
+  service:
+    name: influxdb
+    state: started
+
+
+- name: Add Influxdb Repository
+  copy:
+    src: influxdb.repo
+    dest: /etc/yum.repos.d/
+
+- name: Install Influxdb
+  yum:
+    name: influxdb
+    state: latest
+    update_cache: yes
+
+- name: Start Influxdb
+  service:
+    name: influxdb
+    state: started
